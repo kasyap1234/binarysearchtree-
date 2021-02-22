@@ -1,24 +1,35 @@
 class Node:
     def __init__(self,data):
         self.data=data
-        self.leftchild= None 
-        self.rightchild= None 
-class BinarysearchTree:
-    def __init__(self):
-        self.root=None 
-    def insert(self,data):
+        self.leftchild=None 
+        self.rightchild=None 
+class Binarysearchtree:
+    def __init__(self,root):
         if not self.root:
             self.root=Node(data)
-        else: 
+        else:
             self.insertNode(data,self.root)
-    def insertNode(self,root,data):
-        if node.data>data:
+
+    def insertNode(self,node):
+        if data<node.data:
             if node.leftchild:
                 self.insertNode(data,node.leftchild)
             else:
-                node.leftchild= Node(data)
+                node.leftchild=Node(data)
         else:
-            if node.rightchild:
-                self.insertNode(data,node.rightchild)
-            else:
-                node.rightchild=Node(data)
+            if node.data<data:
+                if node.rightchild:
+                    self.insertNode(data,node.rigthchild)
+                else:
+                    node.rightchild=Node(data)
+    def getmin(self):
+        if self.root:
+            return self.getminvalue(self.root)
+        else: 
+            return self.root
+    def getminavlue(self,node):
+        if  node.leftchild:
+            self.getminvalue(node.lefchild)
+        else:
+            return node.data      
+            
