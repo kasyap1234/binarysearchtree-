@@ -1,0 +1,37 @@
+class Node:
+	def __init__(self,data):
+		self.data=data
+		self.leftchild=None 
+		self.rightchild=None 
+
+class Tree:
+	def __init__(self,node):
+		self.rootnode=Node(data)
+
+	def insertnode(self,node):
+		node1=Node(data)
+		if self.rootnode is None:
+			 return self.rootnode==node1(data)
+    	else: 
+    	 	return self.insertelse(self,node)
+    def insertelse(self,data,currentnode):
+    	currentnode=Node(data)
+
+    	if data<curretnode.data:
+    		if currentnode.leftchild:
+    			return insertelse(data,currentnode.leftchild)
+    		else:
+    			currentnode.data=data
+
+        else:
+        	if curretnode.rightchild:
+        		return insertelse(data,currentode.rightchild)
+        	else: 
+        		currentnode.data=data
+    def findsmallest:
+    	if not self.rootnode:
+    		return 
+    	if self.rootnode:
+    		self.rootnode.leftchild
+    	else:
+    		return self.rootnode
